@@ -1,0 +1,25 @@
+{
+  "name": "helmeta",
+  "version": "0.0.2",
+  "description": "ajax library for rest like firebase",
+  "main": "helmeta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phi-jp/helmeta.git"
+  },
+  "keywords": [
+    "ajax",
+    "javascript"
+  ],
+  "author": "phi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phi-jp/helmeta/issues"
+  },
+  "homepage": "https://github.com/phi-jp/helmeta#readme",
+  "dependencies": {
+  }
+}
