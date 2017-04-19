@@ -1,0 +1,70 @@
+<!doctype html>
+ 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <title>Helmeta</title>
+    <meta name="description" content="${description}" />
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/3.1.0/riot+compiler.js'></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/phi-jp/meltline/03f8b9c6c395357a4efef81ebea5c04ec5e58c04/meltline.min.css">
+
+    <script src='helmeta.js'></script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <app></app>
+  </body>
+</html>
+
+<script type="riot/tag" template='jade'>
+app
+  header.white.text-center.p16
+    h1 {document.title}
+
+  div.container.p40
+    ul
+      li: a(href='#a', onclick='{change}') タイトルA
+      li: a(href='#b', onclick='{change}') タイトルB
+      li: a(href='#c', onclick='{change}') タイトルC
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      height: 100%;
+
+      header {
+        background-color: hsl(200, 80%, 60%);
+      }
+
+      .container {
+        width: 960px;
+        margin: 0px auto;
+      }
+    }
+
+  script.
+    var self = this;
+
+    this.on('mount', function() {
+    });
+
+    this.change = function(e) {
+      helmeta.set({
+        'title': e.currentTarget.textContent
+      });
+    };
+
+</script>
+
+<script>
+riot.mount('app');
+</script>
