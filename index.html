@@ -8,6 +8,7 @@
     
     <title>Helmeta</title>
     <meta name="description" content="${description}" />
+    <meta name="keywords" content="keywords">
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jade/1.11.0/jade.js'></script>
@@ -59,7 +60,8 @@ app
 
     this.change = function(e) {
       helmeta.set({
-        'title': e.currentTarget.textContent
+        'title': e.currentTarget.textContent,
+        'keywords': e.currentTarget.textContent,
       });
     };
 

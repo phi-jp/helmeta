@@ -25,6 +25,9 @@
       set('description', params.description);
       set('og:description', params.description);
 
+      // keywords
+      set('keywords', params.keywords);
+      
       // image
       set('og:image', params.image);
 
@@ -37,6 +40,7 @@
       var elements = Array.prototype.slice.call(document.querySelectorAll('meta[property]'));
       var map = {
         description: $q('meta[name=description]'),
+        keywords: $q('meta[name=keywords]'),
       };
       elements.forEach(function(e) {
         var property = e.getAttribute('property');
